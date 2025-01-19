@@ -1,1 +1,0 @@
-console.log('server from src folder');
