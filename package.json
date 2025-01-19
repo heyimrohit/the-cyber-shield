@@ -7,21 +7,35 @@
     "test": "node test.js",
     "dev": "nodemon src/server.ts",
     "start": "node dist/server.js",
+    "lint": "eslint",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint:fix"
+    ]
+  },
   "description": "",
   "dependencies": {
-    "@types/express": "^5.0.0",
-    "express": "^4.21.2",
-    "husky": "^9.1.7"
+    "@commitlint/config-conventional": "^19.6.0",
+    "commitlint": "^19.6.1",
+    "express": "^4.21.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/express": "^5.0.0",
     "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.1",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
   }
 }
